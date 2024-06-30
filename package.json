@@ -1,0 +1,38 @@
+{
+	"name": "vscode-misc",
+	"version": "0.0.1",
+	"main": "./dist/extension.js",
+	"browser": "./dist/extension.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cooolbros/vscode-misc"
+	},
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "decodeURIComponent",
+				"title": "decodeURIComponent"
+			},
+			{
+				"command": "encodeURIComponent",
+				"title": "encodeURIComponent"
+			}
+		]
+	},
+	"scripts": {
+		"dev": "webpack --watch",
+		"build": "webpack"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.9",
+		"@types/vscode": "^1.90.0",
+		"ts-loader": "^9.5.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.5.2",
+		"webpack": "^5.92.1",
+		"webpack-cli": "^5.1.4"
+	}
+}
