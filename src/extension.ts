@@ -13,4 +13,10 @@ export function activate(context: ExtensionContext) {
 			edit.replace(editor.selection, encodeURIComponent(editor.document.getText(editor.selection)))
 		})
 	)
+
+	context.subscriptions.push(
+		commands.registerTextEditorCommand("secure", (editor: TextEditor, edit: TextEditorEdit) => {
+			edit.replace(editor.selection, "X".repeat(editor.document.getText(editor.selection).length))
+		})
+	)
 }
