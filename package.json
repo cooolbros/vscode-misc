@@ -21,6 +21,10 @@
 				"title": "encodeURIComponent"
 			},
 			{
+				"command": "randomUUID",
+				"title": "randomUUID"
+			},
+			{
 				"command": "secure",
 				"title": "Secure"
 			}
