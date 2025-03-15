@@ -5,17 +5,18 @@ export default {
 	mode: "production",
 	target: "node",
 	entry: {
-		extension: join(__dirname, "src/extension.ts")
+		extension: join(import.meta.dirname, "src/extension.ts")
 	},
 	output: {
-		path: join(__dirname, "dist"),
-		libraryTarget: "commonjs2"
+		path: join(import.meta.dirname, "dist"),
+		libraryTarget: "commonjs2",
+		clean: true,
 	},
 	externals: {
 		vscode: "commonjs vscode"
 	},
 	resolve: {
-		extensions: [".js", ".ts"]
+		extensions: [".ts"]
 	},
 	module: {
 		rules: [
